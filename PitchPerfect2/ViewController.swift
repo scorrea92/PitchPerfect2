@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(<#T##animated: Bool##Bool#>)
+        super.viewWillAppear(animated)
         print("viewWillAppear called")
     }
     
@@ -30,15 +30,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func recordAudio(_ sender: Any) {
-        print("record button was pressed")
         recordingLabel.text = "Recording in Process"
         stopRecordingButton.isEnabled = true
         recordButton.isEnabled = false
     }
     @IBAction func stopRecording(_ sender: Any) {
-        print("StopRecord button was pressed")
         stopRecordingButton.isEnabled = false
         recordButton.isEnabled = true
+        recordingLabel.text = "Tap to Record"
     }
     
 }
